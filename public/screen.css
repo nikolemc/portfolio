@@ -2,6 +2,7 @@ html {
  padding: 0px;
  margin: 0px;
 
+
   }
 
 body {
@@ -9,29 +10,35 @@ body {
   padding:0px;
   font: 16px / 1 sans-serif;
   background: #84958b url("Images/NikoleMcStanleyMobile.png") fixed no-repeat bottom right;
-
+  background-size: 75vh;
+  height: auto;
+  height: 100%;
+  min-height: 100%;
+  text-decoration: none;
   }
  @media (min-width : 320px) and (max-width : 885px) {
 	body{ background-image: url("Images/NikoleMcStanleyMobile.png"); }
 }
 
 @media (min-width: 886px) {
-  body{ background-image: url("Images/NikoleMcStanley.png");  } 
+  body{ background-image: url("Images/NikoleMcStanley.png"); } 
  }
   
  
 .container {
 display: flex;
+justify-content: space-between;
+max-width: 100%;
 
 }
 
 .header {
   flex: 1;
-  width: 100vh;
+  width: 100%;
   height: 80px;
   background: #1a1a1a; 
   margin: 0px;
-  padding: 0px;
+  justify-content: space-between;
 }
 .headerContent {
   display: flex;
@@ -39,8 +46,8 @@ display: flex;
   align-items: center;
   height: 80px;
   padding-left: 10px;
-  padding-right: 40px;
- }
+  padding-right: 10px;
+   }
  .Logo {
   padding-top: 7px;
  }
@@ -49,7 +56,7 @@ display: flex;
     list-style: none; 
             }
 
- li {
+ .portfolioLinks li {
      padding: 8px;
  }
 
@@ -59,7 +66,130 @@ display: flex;
       font-size: 10px / helvetica;
       font-weight: bold;
 }
-.BodyContent {
+.headerContent ul a:hover {
+      color: #b73a09;
+}
+/* Dropdown Button */
+.dropbtn {
+    background: #1a1a1a url("Images/hamburger.png") fixed no-repeat;
+    color: white;
+    list-style: none;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {    
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    align-self: flex-start;
+    position: absolute;
+    left: -1px;
+    background-color: #3e4a43;
+    max-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+.dropdown-content ul {
+    list-style: none;
+    position: center;
+    padding-left: 0px;
+  }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+  
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #84958b;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #84958b;
+    
+}
+
+
+
+.NameTitle {
       color: #3e4a43;  
-      font-size: 6px / mistral;
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      padding-left: 20px;
+      text-decoration: none;
+     }
+
+.portfolioMaster {
+display:flex;
+justify-content:flex-start;
+padding-inline-end: 10px;
+flex-wrap: wrap;
+margin: 10px;
+}
+
+.PortfolioText {
+   display:flex;
+   justify-content:center;  
+   color: #3e4a43;  
+   font-size: 10px / helvetica;
+   font-weight: bold;
+   
+  }
+
+.ImageGroup {
+  position: center;
+  
+  }
+.ImageParent {
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  padding-left: 30px
+  }
+
+.ImageParent:hover { 
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0px;
+  width: 33%;
+  max-width: 190px;
+  max-height: 190px;
+}
+.image2 {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 33%;
+  max-width: 200px;
+ max-height: 200px;
+}
+
+@media screen and (min-width: 886px) {
+  .image1 {width: 100%; max-width: 390px;  max-height: 390px; }
+  .image2 {width: 100%; max-width: 400px;  max-height: 400px; }
 }
